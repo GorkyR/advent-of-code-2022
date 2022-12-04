@@ -1,4 +1,7 @@
-with open('./day2/input.txt', 'r') as file:
+from sys import argv
+from os.path import join as path, dirname as dir
+
+with open(path(dir(argv[0]), 'input.txt'), 'r') as file:
     input = file.read()
 
 move_points = {'X': 1, 'Y': 2, 'Z': 3}

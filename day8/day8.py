@@ -40,6 +40,6 @@ def up_to_and_including(list, predicate):
     return output
 
 
-view_scores = map_over_cross(trees, lambda l, t: len(up_to_and_including(
-    l, lambda x: x >= t)), lambda _, n, w, s, e: n * w * s * e)
+view_scores = map_over_cross(trees, lambda l, t: len(
+    up_to_and_including(l, lambda x: x >= t)), lambda _, n, w, s, e: n * w * s * e)
 print(max([max(row) for row in view_scores]))

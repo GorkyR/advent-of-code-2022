@@ -24,10 +24,11 @@ while True:
 
     if executing is None:
         instruction = instructions[pointer]
-        if instruction[0] == 'noop':
-            pointer += 1
-        if instruction[0] == 'addx':
-            executing = int(instruction[1])
+        match instruction:
+            case ['noop']:
+                pointer += 1
+            case ['addx', value]:
+                executing = int(value)
     else:
         register += executing
         executing = None
